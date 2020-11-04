@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet var field: UITextField!
     
     var data = [String]()
-    var filteredData = [String]()
+   // var filteredData = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
