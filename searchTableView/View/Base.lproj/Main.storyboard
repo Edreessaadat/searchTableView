@@ -37,6 +37,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ixm-ns-6lB"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="clG-Z0-qWS"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -58,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-523" y="43"/>
+            <point key="canvasLocation" x="-787" y="45"/>
         </scene>
     </scenes>
     <resources>
