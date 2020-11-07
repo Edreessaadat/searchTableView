@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet var table: UITableView!
     @IBOutlet var field: UITextField!
     
-    var copyData: NewModel = NewModel()
+    var copyData = NewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +26,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = copyData.data[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let detail = self.storyboard?.instantiateViewController(identifier: "DetailViewController") as? DetailViewController{
+            
+           detail.areaOfProvince = copyData.areaArray[indexPath.row] + " km^2"
+            detail.cityOfAfghanistan = copyData.data[indexPath.row]
+            detail.pupolationOfProvince = copyData.populationArray[indexPath.row]
+
+            self.navigationController?.pushViewController( detail, animated: true)
+        }
     }
     
 }
